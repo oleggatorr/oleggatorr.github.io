@@ -1,0 +1,155 @@
+/* Общие настройки */
+:root {
+  --bg: #0f0f1b;
+  --text: #e0e0ff;
+  --accent: #ff4da6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+p {
+	padding: 20;
+	margin : 20;
+}
+
+/* Glitch-эффект заголовка */
+.glitch {
+  position: relative;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 900;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  5% { clip: rect(12px, 9999px, 59px, 0); }
+  10% { clip: rect(48px, 9999px, 29px, 0); }
+  15% { clip: rect(42px, 9999px, 73px, 0); }
+  20% { clip: rect(63px, 9999px, 27px, 0); }
+  25% { clip: rect(34px, 9999px, 55px, 0); }
+  30% { clip: rect(86px, 9999px, 73px, 0); }
+  35% { clip: rect(20px, 9999px, 20px, 0); }
+  40% { clip: rect(26px, 9999px, 60px, 0); }
+  45% { clip: rect(25px, 9999px, 66px, 0); }
+  50% { clip: rect(57px, 9999px, 98px, 0); }
+  55% { clip: rect(5px, 9999px, 46px, 0); }
+  60% { clip: rect(82px, 9999px, 31px, 0); }
+  65% { clip: rect(54px, 9999px, 27px, 0); }
+  70% { clip: rect(24px, 9999px, 43px, 0); }
+  75% { clip: rect(39px, 9999px, 40px, 0); }
+  80% { clip: rect(35px, 9999px, 33px, 0); }
+  85% { clip: rect(5px, 9999px, 56px, 0); }
+  90% { clip: rect(86px, 9999px, 20px, 0); }
+  95% { clip: rect(46px, 9999px, 39px, 0); }
+  100% { clip: rect(36px, 9999px, 53px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); }
+  10% { clip: rect(52px, 9999px, 74px, 0); }
+  20% { clip: rect(79px, 9999px, 85px, 0); }
+  30% { clip: rect(75px, 9999px, 5px, 0); }
+  40% { clip: rect(6px, 9999px, 56px, 0); }
+  50% { clip: rect(25px, 9999px, 43px, 0); }
+  60% { clip: rect(83px, 9999px, 33px, 0); }
+  70% { clip: rect(54px, 9999px, 91px, 0); }
+  80% { clip: rect(55px, 9999px, 46px, 0); }
+  90% { clip: rect(63px, 9999px, 37px, 0); }
+  100% { clip: rect(85px, 9999px, 39px, 0); }
+}
+
+/* Плавающие карточки */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+}
+
+/* Анимированная навигация */
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 1rem;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Скрытые элементы */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Когда появляется — анимация срабатывает */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Опционально: разные эффекты */
+.fade-in.slide-left {
+  transform: translateX(-30px);
+}
+.fade-in.slide-right {
+  transform: translateX(30px);
+}

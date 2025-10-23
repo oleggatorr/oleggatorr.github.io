@@ -19,9 +19,13 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
+
 p {
-	padding: 20;
-	margin : 20;
+  
+  margin: 20px 0;
 }
 
 /* Glitch-эффект заголовка */
@@ -100,14 +104,51 @@ p {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   backdrop-filter: blur(10px);
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px) rotateX(5deg);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 77, 166, 0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.card .description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+
+.card .tech-stack {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.card .project-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.card .project-link:hover {
+  color: #ff85c2;
+  text-decoration: underline;
 }
 
 /* Анимированная навигация */

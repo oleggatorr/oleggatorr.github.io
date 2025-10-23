@@ -9,6 +9,7 @@
   
 </head>
 <body>
+  
   <header>
     <h1 class="glitch" data-text="Привет, я — Олег">Привет, я — Олег</h1>
 	<p>Это тестовый вариант сайта, собранный на коленке</p>
@@ -18,7 +19,7 @@
       <a href="#contact">Контакты</a>
     </nav>
   </header>
-
+  
   <main>
     <section id="about" class="fade-in">
       <h2>Обо мне</h2>
@@ -28,16 +29,92 @@
     </section>
 
     <section id="projects" class="fade-in">
-      <h2>Мои проекты</h2>
-      <div class="card">Приложение для игры в калах по сети</div>
-      <div class="card">Веб приложения с системой ролей</div>
-	  <div class="card">Приложения для работы с БД</div>
-	  <div class="card">Серверные и клиентские части сетевых приложений</div>
+		<h2>Мои проекты</h2>
+	<div class="card">
+		<h3>Многопользовательские «Шашки»</h3>
+		<p class="description">Сервер для сетевой игры с поддержкой параллельных сессий, синхронизацией в реальном времени и собственным TCP-протоколом.</p>
+		<hr />
+		<p class="tech-stack">Стек: C#, .NET, TCP/IP, Multithreading, JSON, UML</p>
+		<!--<a href="https://github.com/ваш-ник/checkers-server" target="_blank" rel="noopener" class="project-link">→ Исходный код на GitHub</a>-->
+	</div>
+
+	<div class="card">
+		<h3>Веб-приложение с ролями и аутентификацией</h3>
+		<p class="description">REST API с JWT-аутентификацией, многоуровневой системой ролей (админ, пользователь, гость) и защитой от CSRF, XSS и инъекций.</p>
+		<hr />
+		<p class="tech-stack">Стек: ASP.NET Core, Entity Framework Core, PostgreSQL, JWT, Identity, xUnit, Moq</p>
+	</div>
+
+	<div class="card">
+		<h3>Система управления задачами (To-Do List)</h3>
+		<p class="description">Веб-API для управления личными задачами с поддержкой категорий, дедлайнов, приоритетов и фоновых напоминаний.</p>
+		<hr />
+		<p class="tech-stack">Стек: ASP.NET Core, Entity Framework Core, PostgreSQL, Swagger, xUnit, MediatR, AutoMapper, FluentValidation</p>
+	</div>
+
+	<div class="card">
+		<h3>Блог с комментариями и модерацией</h3>
+		<p class="description">Платформа для публикации постов с поддержкой вложенных комментариев, ролевой системой и модерацией контента.</p>
+		<hr />
+		<p class="tech-stack">Стек: ASP.NET Core, Entity Framework Core, PostgreSQL, JWT, IMemoryCache, Repository + Unit of Work</p>
+	</div>
+
+	<div class="card">
+		<h3>Интеграционный сервис для внешнего API</h3>
+		<p class="description">Сервис, агрегирующий данные из публичного API (например, курсы валют), с кэшированием, resilience и fallback-логикой.</p>
+		<hr />
+		<p class="tech-stack">Стек: ASP.NET Core, HttpClient, Polly, Redis / IMemoryCache, Serilog, Moq</p>
+	</div>
+
+	<div class="card">
+		<h3>Микросервис управления книгами</h3>
+		<p class="description">RESTful сервис каталога книг с поддержкой авторов, жанров, поиска, пагинации и валидации входных данных.</p>
+		<hr />
+		<p class="tech-stack">Стек: Java 17, Spring Boot, Spring Data JPA, PostgreSQL, Hibernate, Lombok, JUnit 5, Mockito, Maven, Swagger</p>
+	</div>
+
+	<div class="card">
+		<h3>Сервис конвертации валют</h3>
+		<p class="description">Spring Boot-сервис для конвертации валют с кэшированием курсов, обработкой ошибок и fallback-механизмами.</p>
+		<hr />
+		<p class="tech-stack">Стек: Java, Spring Boot, WebClient, Spring Cache (Caffeine), SLF4J, JUnit, Mockito</p>
+	</div>
+
+	<div class="card">
+		<h3>REST API для заметок с тегами</h3>
+		<p class="description">Лёгкое FastAPI-приложение для создания, редактирования и тегирования заметок с JWT-аутентификацией и автоматической документацией.</p>
+		<hr />
+		<p class="tech-stack">Стек: Python, FastAPI, SQLAlchemy, PostgreSQL, Pydantic, Alembic, pytest, JWT</p>
+	</div>
+
+	<div class="card">
+		<h3>Анализатор логов веб-сервера</h3>
+		<p class="description">Скрипт для парсинга access.log и генерации статистики: топ IP-адресов, частые ошибки, популярные URL.</p>
+		<hr />
+		<p class="tech-stack">Стек: Python, регулярные выражения, collections, argparse, pandas (опционально), pytest</p>
+	</div>
+
+	<div class="card">
+		<h3>Telegram-бот для заметок</h3>
+		<p class="description">Асинхронный Telegram-бот для сохранения и просмотра личных заметок с привязкой к пользователю.</p>
+		<hr />
+		<p class="tech-stack">Стек: Python, python-telegram-bot, SQLite, asyncio, pytest</p>
+	</div>
+
+	<div class="card">
+		<h3>Full-stack доска задач (Kanban)</h3>
+		<p class="description">Веб-приложение с доской задач в стиле Kanban, drag-and-drop интерфейсом и авторизацией пользователей.</p>
+		<hr />
+		<p class="tech-stack">Стек: ASP.NET Core, Entity Framework Core, PostgreSQL, React / Blazor / Razor Pages, JWT, xUnit</p>
+	</div>
     </section>
 
     <section id="contact" class="fade-in">
       <h2>Свяжитесь со мной</h2>
-      <p>GitHub / <a href = "https://t.me/Oolegato">Telegram </a>/ <a href = "mailto:feshchenkooleg@gmail.com">Email</a></p>
+      <p> 
+	  <a href="https://t.me/Oolegato" target="_blank" rel="noopener">Telegram</a>
+	  <a  target="_blank" rel="noopener">GitHub</a>
+	  <a href = "mailto:feshchenkooleg@gmail.com" target="_blank" rel="noopener">Email</a></p>
     </section>
   </main>
   <script src="script.js"></script>
